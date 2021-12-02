@@ -1,8 +1,6 @@
 import { Module } from '@nestjs/common';
 import { join } from 'path/posix';
 import { SequelizeModule } from '@nestjs/sequelize';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { OrdersModule } from './orders/orders.module';
 import { Order } from './orders/entities/order.entity';
 
@@ -16,7 +14,7 @@ import { Order } from './orders/entities/order.entity';
       autoLoadModels: true,
     }),
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
